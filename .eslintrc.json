@@ -1,0 +1,7 @@
+{
+    "extends": "standard",
+    "env": {
+      "amd": true,
+      "browser": true
+    }
+}
