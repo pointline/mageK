@@ -1,6 +1,6 @@
 {
   "name": "mtheme",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Magento2自动化工具扩展,基于Gulp搭建,包括JS编译,Less,phtml,图片压缩等等",
   "main": "index.js",
   "scripts": {
