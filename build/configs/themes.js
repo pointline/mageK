@@ -3,8 +3,8 @@
  * @type {Object}
  * point: {
  *    name: 'Point name', 主题名
- *    area: 'frontend', 主题区域  adminhtml / frontend
- *    src: 'Pointline/point' Vendor/theme name
+ *    area: 'frontend', 主题区域  adminhtml | frontend
+ *    src: 'Pointline/point' VendorName/theme
  */
 const themes = {
   // default: {

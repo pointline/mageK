@@ -18,7 +18,7 @@ const args = yargs.options({
     choices: ['all', ...Object.keys(themeConfig)]
   },
   'production': {
-    alias: 'p',
+    alias: 'prod',
     type: 'boolean',
     default: false,
     desc: 'Production mode'

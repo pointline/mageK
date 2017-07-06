@@ -58,7 +58,7 @@ const createThemePath = function (ext = '') {
  * @param  {String} [theme='default'} =             {}] [description]
  * @return {[String]}                   [description]
  */
-const createBasePath = function ({theme = 'default'} = {}) {
+const createBasePath = function (theme = '') {
   let src = `./${themeConfig[theme].area}/${themeConfig[theme].src}`
 
   return src
@@ -190,7 +190,7 @@ Theme config: ${pkg.name}/build/configs/themes.js
 const _isThemeCheck = function () {
   let themeArr = []
   for (let theme in themeConfig) {
-    let basePath = createBasePath(themeConfig[theme])
+    let basePath = createBasePath(theme)
     if (!checkPath(basePath)) {
       util.log(util.colors.red(`Please execute gulp init first to create a theme ${theme}
         `))
