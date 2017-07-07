@@ -44,14 +44,4 @@ List['modulesDir'] = [
   'Wishlist'
 ]
 
-const taskList = {
-  'js': ['scripts'],
-  'xml': ['xml'],
-  'html': ['html', 'phtml'],
-  'css': ['less'],
-  'php': ['php'],
-  'img': ['imagejpg', 'imagepng', 'imagegif']
-}
-
 export default List
-export {taskList}

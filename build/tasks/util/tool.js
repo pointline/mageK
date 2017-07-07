@@ -55,18 +55,11 @@ const createThemePath = function (ext = '') {
 
 /**
  * [createBasePath]
- * @param  {String} [theme='default'} =             {}] [description]
- * @return {[String]}                   [description]
+ * @param  {String} [theme=''] [description]
+ * @return {[type]}            [description]
  */
 const createBasePath = function (theme = '') {
   let src = `./${themeConfig[theme].area}/${themeConfig[theme].src}`
-
-  return src
-}
-
-const createWatchPath = function () {
-  let theme = themeConfig[args.theme]
-  let src = `./${theme.area}/${theme.src}/**/*`
 
   return src
 }
@@ -110,7 +103,7 @@ const initTheme = function () {
 const _createTheme = function () {
   let Dirs = []
   for (let key in themeConfig) {
-    let basePath = createBasePath({theme: key})
+    let basePath = createBasePath(key)
     if (checkPath(basePath)) {
       util.log(util.colors.red(`The ${key} theme already exists`))
       continue
@@ -187,6 +180,10 @@ Theme config: ${pkg.name}/build/configs/themes.js
   return true
 }
 
+/**
+ * [_isThemeCheck]
+ * @return {[Array]} [description]
+ */
 const _isThemeCheck = function () {
   let themeArr = []
   for (let theme in themeConfig) {
@@ -201,4 +198,4 @@ const _isThemeCheck = function () {
   return themeArr
 }
 
-export {initTheme, createThemePath, merageStream, cleanPath, createWatchPath}
+export {initTheme, createThemePath, merageStream, cleanPath}
