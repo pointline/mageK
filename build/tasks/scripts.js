@@ -7,6 +7,7 @@ import eslint from 'gulp-eslint'
 // import util from 'gulp-util'
 import args from './util/args'
 import uglify from 'gulp-uglify'
+import stripDebug from 'gulp-strip-debug'
 
 gulp.task('scripts', () => {
   let [scriptSrc, scriptDest] = createThemePath('js')
@@ -27,6 +28,7 @@ gulp.task('scripts', () => {
     //     util.log(util.colors.red(`Total Errors: ${results.errorCount}`))
     // })))
     .pipe(eslint.format())
+    .pipe(gulpif(args.production, stripDebug()))
     .pipe(gulpBabel())
     .pipe(gulpif(args.production, uglify({
 
