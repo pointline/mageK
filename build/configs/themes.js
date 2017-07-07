@@ -1,7 +1,7 @@
 /**
  * [主题配置文件]
  * @type {Object}
- * point: {
+ * point: { 主题标识
  *    name: 'Point name', 主题名
  *    area: 'frontend', 主题区域  adminhtml | frontend
  *    src: 'Pointline/point' VendorName/theme
