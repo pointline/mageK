@@ -2,7 +2,7 @@
 
 ![](./build/static/image/logo.png)
 
-[![npm](https://img.shields.io/badge/npm-v6.10.2-blue.svg)]() [![npm](https://img.shields.io/npm/l/express.svg)]()
+[![node](https://img.shields.io/badge/npm-v6.10.2-blue.svg)]() [![npm](https://img.shields.io/npm/l/express.svg)]()
 
 本插件为了提高Magento2前端主题开发,对Magento2自动化工具做了扩展,基于gulp开发,集成JS编译,Less,
 phtml检查,图片压缩等等不必要重复工作,缩短前端开发时间,工程化开发.
@@ -151,7 +151,7 @@ gulp --t point
 // 编译point主题的同时开启watch
 gulp --t point --w
 // 压缩point主题的js,css,image等资源
-gulp --t point -p
+gulp --t point --prod
 ```
 
 # License
