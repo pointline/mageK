@@ -112,8 +112,10 @@ const _createTheme = function () {
       _createThemeModule(basePath, `Magento_${module}`)
     }
     Dirs.push(`${basePath}/web/css/source`)
+    Dirs.push(`${basePath}/web/css/source/lib`)
     Dirs.push(`${basePath}/web/images`)
     Dirs.push(`${basePath}/web/js`)
+    Dirs.push(`${basePath}/web/fonts`)
     Dirs.push(`${basePath}/media`)
     Dirs.push(`${basePath}/i18n`)
 
@@ -127,7 +129,10 @@ const _createTheme = function () {
     outputFileSync(`${basePath}/theme.xml`, themeReplate)
 
     gulp.src('./build/static/etc/view.xml').pipe(gulp.dest(`${basePath}/etc/`))
-    gulp.src('./build/static/media/preview.jpg').pipe(gulp.dest(`${basePath}/media`))
+    gulp.src('./build/static/media/preview.jpg').pipe(gulp.dest(`${basePath}/media/`))
+    gulp.src('./build/static/less/styles-l.less').pipe(gulp.dest(`${basePath}/web/css/`))
+    gulp.src('./build/static/less/styles-m.less').pipe(gulp.dest(`${basePath}/web/css/`))
+    gulp.src('./build/static/less/_theme.less').pipe(gulp.dest(`${basePath}/web/css/source/`))
 
     util.log(util.colors.green(`Theme ${key} created successfully`))
   }
