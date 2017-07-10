@@ -2,15 +2,15 @@
 
 ![](./build/static/image/logo.png)
 
-[![node](https://img.shields.io/badge/npm-v6.10.2-blue.svg)]() [![npm](https://img.shields.io/npm/l/express.svg)]()
+[![node](https://img.shields.io/badge/node-v6.10.2-blue.svg)]() [![npm](https://img.shields.io/npm/l/express.svg)]()
 
 本插件为了提高Magento2前端主题开发,对Magento2自动化工具做了扩展,基于gulp开发,集成JS编译,Less,
-phtml检查,图片压缩等等不必要重复工作,缩短前端开发时间,工程化开发.
+phtml校验,图片压缩等等不必要重复工作,缩短前端开发时间,以及工程化.
 
 + [支持多area和多theme](#moreAreaAndTheme)
 + [快速生成主题结构](#gulpInit)
 + [支持强大的ES6](#Compile)
-+ [编译压缩JS,Less,Image](#Compile)
++ [编译压缩JS,Less,Image,过滤console,alter,debugger等调试语句](#Compile)
 + [使用流行的JS语法规范 JavaScript Standard Style](https://standardjs.com/)
 + 友好与magento的Grunt结合使用
 
