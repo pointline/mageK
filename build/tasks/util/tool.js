@@ -42,12 +42,12 @@ const createThemePath = function (ext = '') {
   }
   if (themeConfig[theme]) {
     sourceSrc[theme] = `./${themeConfig[theme].area}/${themeConfig[theme].src}/${ext}`
-    sourceDest[theme] = `../../app/design/${themeConfig[theme].area}/${themeConfig[theme].src}`
+    sourceDest[theme] = `../app/design/${themeConfig[theme].area}/${themeConfig[theme].src}`
     return [sourceSrc, sourceDest]
   }
   for (let theme in themeConfig) {
     sourceSrc[theme] = `./${themeConfig[theme].area}/${themeConfig[theme].src}/${ext}`
-    sourceDest[theme] = `../../app/design/${themeConfig[theme].area}/${themeConfig[theme].src}`
+    sourceDest[theme] = `../app/design/${themeConfig[theme].area}/${themeConfig[theme].src}`
   }
 
   return [sourceSrc, sourceDest]
